@@ -1,0 +1,3 @@
+# marus-data-generation
+
+This repository is a collection of Unity scripts aimed at the efficient collection and organization of sensor data, with a focus on creating structured datasets tailored for training object detection models. The scripts cover a range of data types, including point cloud data, 2D camera images, and 2D sonar images. Each script is designed to automate the process of capturing, labeling, and organizing data. 
