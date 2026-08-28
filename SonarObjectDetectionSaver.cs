@@ -22,6 +22,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Marus.CustomInspector;
+using System.Globalization;
 
 
 namespace Marus.ObjectAnnotation
@@ -172,9 +173,9 @@ namespace Marus.ObjectAnnotation
                 xMin = int.MaxValue;
                 yMin  = int.MaxValue;
                 bool found = false;
-                for (int x = 0; x < classImage.height; x++)
+                for (int x = 0; x < classImage.width; x++)
                 {
-                    for (int y = 0; y < classImage.width; y++)
+                    for (int y = 0; y < classImage.height; y++)
                     {
                         var pix = classImage.GetPixel(x, y);
                         if ((int) (pix.r * 255f) == value.Item1 && (int) (pix.g * 255f) == value.Item2 && pix.b >= IntensityThreshold && pix.b < 1f)
@@ -205,9 +206,11 @@ namespace Marus.ObjectAnnotation
                     float y_center = 1 - (center.y / (float) sonar.CartesianYRes);
                     float width = _width / (float) sonar.CartesianXRes;
                     float height = _height / (float) sonar.CartesianYRes;
+                    NumberFormatInfo nfi = new NumberFormatInfo();
+                    nfi.NumberDecimalSeparator = ".";
                     using (StreamWriter sw = File.AppendText(_lbl_path))
                     {
-                        sw.WriteLine($"{value.Item1} {x_center} {y_center} {width} {height}");
+                        sw.WriteLine($"{value.Item1} {x_center.ToString(nfi)} {y_center.ToString(nfi)} {width.ToString(nfi)} {height.ToString(nfi)}");
                     }
                 }
             }

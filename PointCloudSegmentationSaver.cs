@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Marus.Core;
 
 namespace Marus.ObjectAnnotation
 {

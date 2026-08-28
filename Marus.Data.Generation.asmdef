@@ -1,0 +1,17 @@
+{
+    "name": "Marus.Data.Generation",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c47c588af94a289439184f626352a939",
+        "GUID:d3a876cf91aa6994da9ea99591451113"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
