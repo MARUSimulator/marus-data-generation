@@ -7,7 +7,7 @@
   "unityRelease": "23f1",
   "dependencies": {
     "com.marus2.core": "1.0.0",
-    "com.marus-proto": "https://github.com/MARUSimulator/marus2-proto.git#csharp"
+    "com.marus-proto": "1.0.0"
   },
   "author": {
     "name": "LABUST",
